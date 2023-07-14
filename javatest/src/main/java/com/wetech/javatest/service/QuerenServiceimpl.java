@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class QuerenServiceimpl implements QuerenService {
-
  private final QuerenMapper querenMapper;
 
  @Autowired
@@ -15,7 +14,7 @@ public class QuerenServiceimpl implements QuerenService {
   this.querenMapper = querenMapper;
  }
  @Override
- public void saveQueren(Queren queren){
+  public void saveQueren(Queren queren){
    querenMapper.insert(queren);
  }
 }

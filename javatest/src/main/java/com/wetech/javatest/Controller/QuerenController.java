@@ -1,19 +1,28 @@
 package com.wetech.javatest.Controller;
 
+import com.wetech.javatest.entity.Queren;
 import com.wetech.javatest.service.QuerenService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+
+@CrossOrigin(origins ="http://localhost:8081")
+//フロントエンドドメイン
+@Slf4j
 @RestController
-//跨域访问
-@CrossOrigin(origins =" http://localhost:8081")
-//跟前端同一个域名
+//クロスドメイン・アクセス
 @RequestMapping("/apply")
-//跟前端同一个跟目录
+//フロントエンドと同じで目次public
 public class QuerenController {
-    private QuerenService quirenService;
+    private QuerenService querenService;
     @Autowired
-    public QuerenController(QuerenService querenService){}
+    //QuerenServiceのイメモ
+    public QuerenController(QuerenService querenService) {
+        this.querenService = querenService;
+    }
+    @PostMapping("/queren")
+    public void saveQueren(@RequestBody Queren queren) {
+    querenService.saveQueren(queren);
+    }
 }

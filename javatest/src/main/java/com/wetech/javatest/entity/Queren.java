@@ -1,10 +1,32 @@
 package com.wetech.javatest.entity;
-import lombok.Data;
+import lombok.*;
 
 import java.util.Date;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Queren {
+    private Integer id;//primer key
+    private Date now;//申請情報登録日
+    private String aPLShinseisyaName;//画面入力した名前
+    private String aPLAddressYubinNo3;//郵便番号（3桁）
+    private String aPLAddressYubinNo4;//郵便番号（4桁）
+    private String aPLAddressTodofuken;//都道府県
+    private String aPLAddressShikuchoson;//市区町村
+    private String aPLAddressBanchi;//字・番地等
+    private String aPLAddressTodofukenKana ;//都道府県カナ
+    private String aPLAddressShikuchosonKana;//市区町村カナ
+    private String aPLAddressBanchiKana;//字・番地等カナ
+    private String aPLAddressManshon;//マンション名等
+    private String aPLDaihyoshaYakushoku;//代表者の役職
+    private String aPLDaihyoshaName;//代表者の氏名
+    private String aPLHojinNo;//法人番号
+    private String aPLTantoshaName;//担当者の氏名
+    private String aPLCSTEL;//電話番号
+    private String aPLCSFAX;//FAX番号
+    private String aPLCSTantoshaMail;//担当者メールアドレス
+    private String aPLCSKakuninyoMail;//確認用メールアドレス
     public Integer getId() {
         return id;
     }
@@ -165,24 +187,5 @@ public class Queren {
         this.aPLCSKakuninyoMail = aPLCSKakuninyoMail;
     }
 
-    private Integer id;
-    private Date now;
-    private String aPLShinseisyaName;
-    private String aPLAddressYubinNo3;
-    private String aPLAddressYubinNo4;
-    private String aPLAddressTodofuken;
-    private String aPLAddressShikuchoson;
-    private String aPLAddressBanchi;
-    private String aPLAddressTodofukenKana ;
-    private String aPLAddressShikuchosonKana;
-    private String aPLAddressBanchiKana;
-    private String aPLAddressManshon;
-    private String aPLDaihyoshaYakushoku;
-    private String aPLDaihyoshaName;
-    private String aPLHojinNo;
-    private String aPLTantoshaName;
-    private String aPLCSTEL;
-    private String aPLCSFAX;
-    private String aPLCSTantoshaMail;
-    private String aPLCSKakuninyoMail;
+
 }

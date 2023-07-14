@@ -3,6 +3,7 @@ package com.wetech.javatest.mapper;
 import com.wetech.javatest.entity.Queren;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.transaction.annotation.Transactional;
 
 @Mapper
 public interface QuerenMapper {
